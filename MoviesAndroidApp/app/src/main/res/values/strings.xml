@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoviesAndroidApp</string>
+    <string name="search_movies">Search Movies…</string>
+    <string name="cinemas_near_you">Cinemas near you</string>
+    <string name="cinema_name">Cinema Name</string>
+    <string name="distance">Distance:</string>
+    <string name="_120">120</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="cinema_icon">Cinema icon</string>
+    <string name="show_cinemas_near_you">Show cinemas near you</string>
+    <string name="poster_of_the_movie">Poster of the movie</string>
+    <string name="magnifying_glass_icon">Magnifying glass icon</string>
+</resources>
