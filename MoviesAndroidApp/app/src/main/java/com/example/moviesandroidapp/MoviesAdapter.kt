@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class MoviesAdapter(private var mList: List<MoviesViewModel>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
@@ -27,7 +28,9 @@ class MoviesAdapter(private var mList: List<MoviesViewModel>) : RecyclerView.Ada
         val itemsViewModel = mList[position]
 
         // sets the image to the imageview from our itemHolder class
-        holder.imageView.setImageResource(itemsViewModel.image)
+        Glide.with(holder.itemView.context)
+            .load(itemsViewModel.image) // URL of the image
+            .into(holder.imageView) // ImageView where the image will be loaded
 
         // sets the text to the textview from our itemHolder class
         holder.textView.text = itemsViewModel.name
