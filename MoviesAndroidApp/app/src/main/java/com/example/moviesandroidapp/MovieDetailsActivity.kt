@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.moviesandroidapp.databinding.ActivityMainBinding
 import com.example.moviesandroidapp.databinding.ActivityMovieDetailsBinding
 
@@ -27,7 +28,7 @@ class MovieDetailsActivity : AppCompatActivity() {
 
         val movieName = intent.getStringExtra("movieName")
         val movieDescription = intent.getStringExtra("movieDescription")
-        val movieImage = intent.getIntExtra("movieImage", 0)
+        val movieImage = intent.getStringExtra("movieImage")
 
         val t1: TextView = findViewById(R.id.detailMovieName)
         t1.text = movieName
@@ -37,7 +38,9 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         val img1: ImageView = findViewById(R.id.movieImage)
-        img1.setImageResource(movieImage)
+        Glide.with(this)
+            .load(movieImage)
+            .into(img1)
 
     }
 }
