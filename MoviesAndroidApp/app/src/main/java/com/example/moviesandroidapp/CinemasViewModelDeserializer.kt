@@ -17,7 +17,10 @@ class CinemasViewModelDeserializer(private val resources: Resources) : JsonDeser
         val latitude = jsonObject?.get("latitude")?.asDouble ?: 0.0
         val longitude = jsonObject?.get("longitude")?.asDouble ?: 0.0
         val distance = jsonObject?.get("distance")?.asInt ?: 0
+        val imageUrl = jsonObject?.get("imageUrl")?.asString ?: ""
+        val image_width = jsonObject?.get("image_width")?.asInt ?: 0
+        val image_length = jsonObject?.get("image_length")?.asInt ?: 0
 
-        return CinemasViewModel(name, latitude, longitude, distance)
+        return CinemasViewModel(name, latitude, longitude, distance, imageUrl, image_width, image_length)
     }
 }

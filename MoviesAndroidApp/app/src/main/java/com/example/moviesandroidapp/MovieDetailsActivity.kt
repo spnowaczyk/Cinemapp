@@ -29,6 +29,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         val movieName = intent.getStringExtra("movieName")
         val movieDescription = intent.getStringExtra("movieDescription")
         val movieImage = intent.getStringExtra("movieImage")
+        val movieRating = intent.getStringExtra("movieRating")
 
         val t1: TextView = findViewById(R.id.detailMovieName)
         t1.text = movieName

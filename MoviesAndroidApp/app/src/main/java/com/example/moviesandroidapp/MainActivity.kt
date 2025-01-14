@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("movieName", it.name)
             intent.putExtra("movieDescription", it.description)
             intent.putExtra("movieImage", it.image)
+            intent.putExtra("movieRating", it.rating)
 
             startActivity(intent)
         }

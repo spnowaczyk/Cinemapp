@@ -85,7 +85,7 @@ class CinemasActivity : AppCompatActivity() {
                                         cinema.latitude?.let { cinemaLat ->
                                             cinema.longitude?.let { cinemaLon ->
                                                 val distance = calculateDistance(userLatitude, userLongitude, cinemaLat, cinemaLon)
-                                                cinemasData.add(CinemasViewModel(cinema.name, cinemaLat, cinemaLon, distance.toInt()))
+                                                cinemasData.add(CinemasViewModel(cinema.name, cinemaLat, cinemaLon, distance.toInt(), cinema.imageUrl, cinema.image_width, cinema.image_length))
                                             }
                                         }
                                     }

@@ -18,8 +18,9 @@ class MoviesViewModelDeserializer(private val resources: Resources) : JsonDeseri
         val imageUrl = jsonObject.get("image_url").asString
         val title = jsonObject.get("title").asString
         val description = jsonObject.get("description").asString
+        val rating = jsonObject.get("rating").asInt
 
-        return MoviesViewModel(imageUrl, title, description)
+        return MoviesViewModel(imageUrl, title, description, rating)
     }
 }
 
