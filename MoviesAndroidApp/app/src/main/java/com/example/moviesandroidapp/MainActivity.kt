@@ -71,12 +71,19 @@ class MainActivity : AppCompatActivity() {
         adapter.onItemClick = {
             val intent = Intent(this, MovieDetailsActivity::class.java)
 
+            intent.putExtra("movieId", it.id)
             intent.putExtra("movieName", it.name)
             intent.putExtra("movieDescription", it.description)
             intent.putExtra("movieImage", it.image)
+            intent.putExtra("movieImageWidth", it.image_width)
+            intent.putExtra("movieImageLength", it.image_length)
             intent.putExtra("movieRating", it.rating)
+            intent.putExtra("movieReleaseDate", it.release_date)
+            intent.putExtra("movieDuration", it.duration)
+            intent.putExtra("movieAgeRestrictions", it.age_restrictions)
 
             startActivity(intent)
+
         }
 
         moviesView.adapter = adapter

@@ -15,13 +15,31 @@ class MoviesViewModelDeserializer(private val resources: Resources) : JsonDeseri
     ): MoviesViewModel {
         val jsonObject = json.asJsonObject
 
-        val imageUrl = jsonObject.get("image_url").asString
+        val id = jsonObject.get("id").asInt
         val title = jsonObject.get("title").asString
+        val imageUrl = jsonObject.get("image_url").asString
+        val imageWidth = jsonObject.get("image_width").asInt
+        val imageLength = jsonObject.get("image_length").asInt
         val description = jsonObject.get("description").asString
         val rating = jsonObject.get("rating").asInt
+        val releaseDate = jsonObject.get("release_date").asString
+        val duration = jsonObject.get("duration").asString
+        val ageRestrictions = jsonObject.get("age_restrictions").asInt
 
-        return MoviesViewModel(imageUrl, title, description, rating)
+        return MoviesViewModel(
+            id,
+            title,
+            imageUrl,
+            imageWidth,
+            imageLength,
+            description,
+            rating,
+            releaseDate,
+            duration,
+            ageRestrictions
+        )
     }
+
 }
 
 

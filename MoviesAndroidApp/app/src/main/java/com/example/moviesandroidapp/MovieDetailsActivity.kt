@@ -26,10 +26,17 @@ class MovieDetailsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val movieId = intent.getIntExtra("movieId", -1)
         val movieName = intent.getStringExtra("movieName")
         val movieDescription = intent.getStringExtra("movieDescription")
         val movieImage = intent.getStringExtra("movieImage")
-        val movieRating = intent.getStringExtra("movieRating")
+        val movieImageWidth = intent.getIntExtra("movieImageWidth", 0)
+        val movieImageLength = intent.getIntExtra("movieImageLength", 0)
+        val movieRating = intent.getIntExtra("movieRating", 0)
+        val movieReleaseDate = intent.getStringExtra("movieReleaseDate")
+        val movieDuration = intent.getStringExtra("movieDuration")
+        val movieAgeRestrictions = intent.getIntExtra("movieAgeRestrictions", 0)
+
 
         val t1: TextView = findViewById(R.id.detailMovieName)
         t1.text = movieName

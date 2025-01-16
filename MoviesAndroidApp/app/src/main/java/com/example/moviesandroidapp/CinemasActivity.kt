@@ -67,7 +67,7 @@ class CinemasActivity : AppCompatActivity() {
 
         val locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
-                locationResult?.lastLocation?.let { location ->
+                 locationResult?.lastLocation?.let { location ->
                     val userLatitude = location.latitude
                     val userLongitude = location.longitude
                     val maxDistance = 10 // 10km
@@ -85,7 +85,23 @@ class CinemasActivity : AppCompatActivity() {
                                         cinema.latitude?.let { cinemaLat ->
                                             cinema.longitude?.let { cinemaLon ->
                                                 val distance = calculateDistance(userLatitude, userLongitude, cinemaLat, cinemaLon)
-                                                cinemasData.add(CinemasViewModel(cinema.name, cinemaLat, cinemaLon, distance.toInt(), cinema.imageUrl, cinema.image_width, cinema.image_length))
+                                                cinemasData.add(
+                                                    CinemasViewModel(
+                                                        id = cinema.id,
+                                                        name = cinema.name,
+                                                        imageUrl = cinema.imageUrl,
+                                                        image_width = cinema.image_width,
+                                                        image_length = cinema.image_length,
+                                                        latitude = cinemaLat,
+                                                        longitude = cinemaLon,
+                                                        city = cinema.city,
+                                                        address = cinema.address,
+                                                        postal_code = cinema.postal_code,
+                                                        country = cinema.country,
+                                                        distance = distance.toInt()
+                                                    )
+                                                )
+
                                             }
                                         }
                                     }

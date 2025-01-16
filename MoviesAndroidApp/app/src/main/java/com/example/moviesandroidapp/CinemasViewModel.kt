@@ -1,11 +1,16 @@
 package com.example.moviesandroidapp
 
 data class CinemasViewModel(
+    val id: Int,
     val name: String,
-    val latitude: Double,
-    val longitude: Double,
-    val distance: Int,
     val imageUrl: String,
     val image_width: Int,
-    val image_length: Int
+    val image_length: Int,
+    val latitude: Double,
+    val longitude: Double,
+    val city: String,
+    val address: String,
+    val postal_code: String,
+    val country: String,
+    val distance: Int
 )
