@@ -1,7 +1,7 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.data.model
 
 import android.content.res.Resources
-import android.util.Log
+import com.example.moviesandroidapp.ui.movie.MoviesViewModel
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
@@ -12,7 +12,8 @@ class MoviesViewModelDeserializer(private val resources: Resources) : JsonDeseri
         json: JsonElement,
         typeOfT: Type,
         context: JsonDeserializationContext
-    ): MoviesViewModel {
+    ): MoviesViewModel
+    {
         val jsonObject = json.asJsonObject
 
         val id = jsonObject.get("id").asInt

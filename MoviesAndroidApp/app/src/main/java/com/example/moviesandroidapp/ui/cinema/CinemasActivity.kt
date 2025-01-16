@@ -1,4 +1,4 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.ui.cinema
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -11,6 +11,7 @@ import com.example.moviesandroidapp.databinding.ActivityCinemasBinding
 import com.google.android.gms.location.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.moviesandroidapp.data.repository.CinemaRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

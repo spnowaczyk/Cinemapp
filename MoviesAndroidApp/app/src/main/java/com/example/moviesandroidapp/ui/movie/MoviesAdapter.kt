@@ -1,4 +1,4 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.ui.movie
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,13 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.moviesandroidapp.R
 
 class MoviesAdapter(private var mList: List<MoviesViewModel>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     var onItemClick: ((MoviesViewModel) -> Unit)? = null
 
     // create new views
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
+    {
         // inflates the card_view_design view
         // that is used to hold list item
         val view = LayoutInflater.from(parent.context)

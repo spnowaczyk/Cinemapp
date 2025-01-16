@@ -1,15 +1,17 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.ui.cinema
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesandroidapp.R
 
 
 class CinemasAdapter(private val mList: List<CinemasViewModel>) : RecyclerView.Adapter<CinemasAdapter.ViewHolder>() {
     // create new views
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
+    {
         // inflates the card_view_design view
         // that is used to hold list item
         val view = LayoutInflater.from(parent.context)

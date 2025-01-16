@@ -1,16 +1,17 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.data.model
 
 import android.content.res.Resources
+import com.example.moviesandroidapp.ui.cinema.CinemasViewModel
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
-import com.google.gson.JsonObject
 import com.google.gson.JsonParseException
 import java.lang.reflect.Type
 
 class CinemasViewModelDeserializer(private val resources: Resources) : JsonDeserializer<CinemasViewModel> {
 
     @Throws(JsonParseException::class)
-    override fun deserialize(json: JsonElement?, typeOfT: Type?, context: com.google.gson.JsonDeserializationContext?): CinemasViewModel {
+    override fun deserialize(json: JsonElement?, typeOfT: Type?, context: com.google.gson.JsonDeserializationContext?): CinemasViewModel
+    {
         val jsonObject = json?.asJsonObject
 
         val id = jsonObject?.get("id")?.asInt ?: 0

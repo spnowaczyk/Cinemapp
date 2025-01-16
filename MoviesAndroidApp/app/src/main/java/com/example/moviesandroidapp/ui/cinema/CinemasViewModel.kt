@@ -1,4 +1,4 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.ui.cinema
 
 data class CinemasViewModel(
     val id: Int,

@@ -1,6 +1,9 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.data.repository
 
 import android.content.res.Resources
+import com.example.moviesandroidapp.api.ApiService
+import com.example.moviesandroidapp.data.model.MoviesViewModelDeserializer
+import com.example.moviesandroidapp.ui.movie.MoviesViewModel
 import com.google.gson.GsonBuilder
 import retrofit2.Callback
 import retrofit2.Retrofit

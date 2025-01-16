@@ -1,4 +1,4 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.ui.movie
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,7 +13,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesandroidapp.data.repository.MovieRepository
+import com.example.moviesandroidapp.ui.cinema.CinemasActivity
 
 
 class MainActivity : AppCompatActivity() {

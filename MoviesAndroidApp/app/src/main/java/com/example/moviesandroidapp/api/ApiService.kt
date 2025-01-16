@@ -1,5 +1,7 @@
-package com.example.moviesandroidapp
+package com.example.moviesandroidapp.api
 
+import com.example.moviesandroidapp.ui.cinema.CinemasViewModel
+import com.example.moviesandroidapp.ui.movie.MoviesViewModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
