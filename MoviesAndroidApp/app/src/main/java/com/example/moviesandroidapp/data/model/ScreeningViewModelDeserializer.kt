@@ -21,8 +21,8 @@ class ScreeningViewModelDeserializer(private val resources: Resources) :
         val cinemaId = jsonObject.get("cinema_id").asInt
         val movieId = jsonObject.get("movie_id").asInt
         val screeningTechnologyId = jsonObject.get("screening_technology_id").asInt
-        val time = if (jsonObject.has("times") && !jsonObject.get("times").isJsonNull) {
-            jsonObject.get("times").asString
+        val time = if (jsonObject.has("time") && !jsonObject.get("time").isJsonNull) {
+            jsonObject.get("time").asString
         } else {
             "Unknown"
         }
