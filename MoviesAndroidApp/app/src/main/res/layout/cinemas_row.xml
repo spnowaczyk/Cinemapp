@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="346dp"
+        android:layout_height="78dp"
         app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#B89191">
+            android:background="@drawable/textbackgroundcinemalist">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -28,6 +29,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
                 app:srcCompat="@drawable/baseline_movie_24" />
 
             <TextView
@@ -35,8 +37,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="15dp"
                 android:text="@string/cinema_name"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,8 +49,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:text="@string/distance"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/cinemaName" />
 
@@ -55,6 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_120"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
                 app:layout_constraintStart_toEndOf="@+id/distanceLabel"
                 app:layout_constraintTop_toTopOf="@+id/distanceLabel" />
         </androidx.constraintlayout.widget.ConstraintLayout>
